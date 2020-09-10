@@ -8,3 +8,8 @@
 - 김초희 : 패밀리 다이어리 개발을 맡고 있습니다
 - 김성태 : coding 파트 입니다
 
+# 목업 화면
+
+![로그인 화면](https://github.com/ProjectInTheClass/family-diary/blob/master/images/mockup_login.png "log in")
+![대답화면](https://github.com/ProjectInTheClass/family-diary/blob/master/images/answer.png "answer")
+![프로필](https://github.com/ProjectInTheClass/family-diary/blob/master/images/profile.png "profile")
