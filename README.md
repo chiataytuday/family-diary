@@ -13,3 +13,5 @@
 ![로그인 화면](https://github.com/ProjectInTheClass/family-diary/blob/master/images/mockup_login.png "log in")
 ![대답화면](https://github.com/ProjectInTheClass/family-diary/blob/master/images/answer.png "answer")
 ![프로필](https://github.com/ProjectInTheClass/family-diary/blob/master/images/profile.png "profile")
+
+# XCode 파일 첫 생성
