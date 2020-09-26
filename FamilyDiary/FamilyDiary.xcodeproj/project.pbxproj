@@ -76,6 +76,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B355A8A2251EE7D6003D706A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C6A2FC602515CAA400132F4F = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +106,7 @@
 		C6A2FC6B2515CAA400132F4F /* FamilyDiary */ = {
 			isa = PBXGroup;
 			children = (
+				B355A8A2251EE7D6003D706A /* Model */,
 				C6A2FC6C2515CAA400132F4F /* AppDelegate.swift */,
 				C6A2FC6E2515CAA400132F4F /* SceneDelegate.swift */,
 				C6A2FC702515CAA400132F4F /* ViewController.swift */,
