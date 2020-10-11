@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bmf-Td-gAc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4fo-Wb-fBY">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -7,107 +7,27 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--질문 리스트-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FamilyDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="패밀리 다이어리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1MA-is-aiq">
-                                <rect key="frame" x="20" y="64" width="374" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="질문 리스트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VxZ-yQ-Xfz">
-                                <rect key="frame" x="20" y="108" width="374" height="34"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8mZ-g1-NPv">
-                                <rect key="frame" x="20" y="158" width="374" height="65"/>
-                                <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="fG8-ba-jSi"/>
-                                </constraints>
-                                <state key="normal">
-                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="미답변" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyt-e8-5tD">
-                                <rect key="frame" x="40" y="180" width="45" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="어렸을 적 장래희망이 뭐였나요? 반갑습니다 우리는 팀입니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ab-oL-i2T">
-                                <rect key="frame" x="105" y="180" width="274" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IMG_711860F10C71-1" translatesAutoresizingMaskIntoConstraints="NO" id="ohv-XP-yF3">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="8mZ-g1-NPv" firstAttribute="top" secondItem="VxZ-yQ-Xfz" secondAttribute="bottom" constant="16" id="5fQ-8i-dea"/>
-                            <constraint firstItem="8mZ-g1-NPv" firstAttribute="leading" secondItem="1MA-is-aiq" secondAttribute="leading" id="7w4-x9-Z25"/>
-                            <constraint firstItem="9ab-oL-i2T" firstAttribute="centerY" secondItem="8mZ-g1-NPv" secondAttribute="centerY" id="8Q0-Dy-NMF"/>
-                            <constraint firstItem="9ab-oL-i2T" firstAttribute="width" secondItem="8mZ-g1-NPv" secondAttribute="width" constant="-100" id="8ip-W4-bod"/>
-                            <constraint firstItem="vyt-e8-5tD" firstAttribute="centerY" secondItem="8mZ-g1-NPv" secondAttribute="centerY" id="9s8-Sa-hdW"/>
-                            <constraint firstItem="8mZ-g1-NPv" firstAttribute="leading" secondItem="vyt-e8-5tD" secondAttribute="leading" constant="-20" id="EXO-gQ-Iu0"/>
-                            <constraint firstItem="VxZ-yQ-Xfz" firstAttribute="leading" secondItem="1MA-is-aiq" secondAttribute="leading" id="Zc6-jG-MDC"/>
-                            <constraint firstItem="8mZ-g1-NPv" firstAttribute="trailing" secondItem="1MA-is-aiq" secondAttribute="trailing" id="b8Z-wC-PL0"/>
-                            <constraint firstItem="1MA-is-aiq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eTs-xn-0oO"/>
-                            <constraint firstItem="9ab-oL-i2T" firstAttribute="leading" secondItem="vyt-e8-5tD" secondAttribute="trailing" constant="20" id="fy7-S2-tOx"/>
-                            <constraint firstItem="1MA-is-aiq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="pyK-Y5-e0c"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1MA-is-aiq" secondAttribute="trailing" constant="20" id="sf3-AH-lGN"/>
-                            <constraint firstItem="VxZ-yQ-Xfz" firstAttribute="top" secondItem="1MA-is-aiq" secondAttribute="bottom" constant="8" id="xXH-3O-YX9"/>
-                            <constraint firstItem="VxZ-yQ-Xfz" firstAttribute="trailing" secondItem="1MA-is-aiq" secondAttribute="trailing" id="zXh-1M-0zb"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="질문 리스트" id="03Z-Ke-ykV"/>
+                    <navigationItem key="navigationItem" id="cct-c8-LOg"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="968.11594202898561" y="163.39285714285714"/>
-        </scene>
-        <!--기념일-->
-        <scene sceneID="q25-ia-plb">
-            <objects>
-                <viewController id="3gL-sc-Ti6" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aAt-rQ-rMj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="패밀리 다이어리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wan-gY-ZkP">
-                                <rect key="frame" x="20" y="44" width="189" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="기념일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJ1-xF-psh">
-                                <rect key="frame" x="20" y="88" width="73" height="34"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="OJ1-xF-psh" firstAttribute="leading" secondItem="wan-gY-ZkP" secondAttribute="leading" id="CQK-j9-ZW9"/>
-                            <constraint firstItem="OJ1-xF-psh" firstAttribute="top" secondItem="wan-gY-ZkP" secondAttribute="bottom" constant="8" id="fSB-Or-ysu"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Nam-Ts-TIk"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="기념일" id="cJ6-Pm-d95"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OXx-27-KuF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="968.11594202898561" y="854.46428571428567"/>
+            <point key="canvasLocation" x="4191" y="163"/>
         </scene>
         <!--설정-->
         <scene sceneID="Ktb-dt-lT5">
@@ -137,31 +57,87 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BiU-YZ-lPk"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="설정" id="g7p-Lu-ZZN"/>
+                    <tabBarItem key="tabBarItem" title="설정" image="gear" catalog="system" id="g7p-Lu-ZZN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AMV-FS-rdM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="968.11594202898561" y="1583.7053571428571"/>
+            <point key="canvasLocation" x="1797.1014492753625" y="945.53571428571422"/>
         </scene>
         <!--Tab Bar Controller-->
-        <scene sceneID="G7H-MA-3xL">
+        <scene sceneID="MUm-td-cHW">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Bmf-Td-gAc" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="4fo-Wb-fBY" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wPp-uv-rtY">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YK6-d3-601">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="cbQ-HV-MzQ"/>
-                        <segue destination="3gL-sc-Ti6" kind="relationship" relationship="viewControllers" id="Z1k-aw-cZ4"/>
-                        <segue destination="Bt4-UI-HEz" kind="relationship" relationship="viewControllers" id="b8L-Xg-GS8"/>
+                        <segue destination="a3k-5g-Yzg" kind="relationship" relationship="viewControllers" id="nUt-Qh-6Hk"/>
+                        <segue destination="Bt4-UI-HEz" kind="relationship" relationship="viewControllers" id="qsP-1e-FCR"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Dm-Pc-LpM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ict-Dy-Bs6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32" y="854"/>
+            <point key="canvasLocation" x="886.95652173913049" y="553.79464285714278"/>
+        </scene>
+        <!--질문목록-->
+        <scene sceneID="G7i-KI-Lkv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a3k-5g-Yzg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="질문목록" image="doc.text" catalog="system" id="iBm-cC-Xrp"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0Ge-Zm-N9L">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mRS-7i-9es" kind="relationship" relationship="rootViewController" id="kjK-pM-Qac"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eSa-9v-pQE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1797" y="163"/>
+        </scene>
+        <!--Question View Controller-->
+        <scene sceneID="5sP-UX-cZW">
+            <objects>
+                <viewController id="mRS-7i-9es" customClass="QuestionViewController" customModule="FamilyDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tNg-bL-TEY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G2A-hH-jNV">
+                                <rect key="frame" x="20" y="108" width="374" height="705"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="G2A-hH-jNV" firstAttribute="top" secondItem="zUi-uD-K7W" secondAttribute="top" constant="20" id="Ip2-ZH-b2Y"/>
+                            <constraint firstItem="G2A-hH-jNV" firstAttribute="bottom" secondItem="zUi-uD-K7W" secondAttribute="bottom" id="NJE-rK-cZe"/>
+                            <constraint firstItem="G2A-hH-jNV" firstAttribute="leading" secondItem="zUi-uD-K7W" secondAttribute="leading" constant="20" id="ap0-fA-4BX"/>
+                            <constraint firstItem="zUi-uD-K7W" firstAttribute="trailing" secondItem="G2A-hH-jNV" secondAttribute="trailing" constant="20" id="cIg-o5-RYY"/>
+                            <constraint firstItem="G2A-hH-jNV" firstAttribute="centerX" secondItem="tNg-bL-TEY" secondAttribute="centerX" id="sfE-te-w0F"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zUi-uD-K7W"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nAT-CJ-zHp"/>
+                    <connections>
+                        <outlet property="questionTableView" destination="G2A-hH-jNV" id="Rwb-eT-1jZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tr6-C1-UxM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2573.913043478261" y="166.74107142857142"/>
         </scene>
     </scenes>
+    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+    <resources>
+        <image name="IMG_711860F10C71-1" width="1125" height="2436"/>
+        <image name="doc.text" catalog="system" width="115" height="128"/>
+        <image name="gear" catalog="system" width="128" height="119"/>
+    </resources>
 </document>
