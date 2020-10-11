@@ -30,3 +30,14 @@ var strings2: [Int] = []
 for item in strings {
     strings2.append(item.count)
 }
+
+//
+func sumAll(result:Int, arg: Int) -> Int {
+    return result + arg
+}
+
+let ret = array.reduce(0,sumAll)
+
+let ret2 = array.reduce(0) {(result,item) -> Int in
+    return result + item
+}
