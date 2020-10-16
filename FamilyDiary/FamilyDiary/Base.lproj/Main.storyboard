@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IMG_711860F10C71-1" translatesAutoresizingMaskIntoConstraints="NO" id="ohv-XP-yF3">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mockup3" translatesAutoresizingMaskIntoConstraints="NO" id="ohv-XP-yF3">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -102,33 +102,26 @@
             </objects>
             <point key="canvasLocation" x="1797" y="163"/>
         </scene>
-        <!--Question View Controller-->
+        <!--Question List Table View Controller-->
         <scene sceneID="5sP-UX-cZW">
             <objects>
-                <viewController id="mRS-7i-9es" customClass="QuestionViewController" customModule="FamilyDiary" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tNg-bL-TEY">
+                <viewController id="mRS-7i-9es" customClass="QuestionListTableViewController" customModule="FamilyDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="NvE-CR-X8P">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G2A-hH-jNV">
-                                <rect key="frame" x="20" y="108" width="374" height="705"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="G2A-hH-jNV" firstAttribute="top" secondItem="zUi-uD-K7W" secondAttribute="top" constant="20" id="Ip2-ZH-b2Y"/>
-                            <constraint firstItem="G2A-hH-jNV" firstAttribute="bottom" secondItem="zUi-uD-K7W" secondAttribute="bottom" id="NJE-rK-cZe"/>
-                            <constraint firstItem="G2A-hH-jNV" firstAttribute="leading" secondItem="zUi-uD-K7W" secondAttribute="leading" constant="20" id="ap0-fA-4BX"/>
-                            <constraint firstItem="zUi-uD-K7W" firstAttribute="trailing" secondItem="G2A-hH-jNV" secondAttribute="trailing" constant="20" id="cIg-o5-RYY"/>
-                            <constraint firstItem="G2A-hH-jNV" firstAttribute="centerX" secondItem="tNg-bL-TEY" secondAttribute="centerX" id="sfE-te-w0F"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="zUi-uD-K7W"/>
-                    </view>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="QuestionList" id="PQQ-yQ-dej">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PQQ-yQ-dej" id="gnM-A0-rZc">
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
                     <navigationItem key="navigationItem" id="nAT-CJ-zHp"/>
-                    <connections>
-                        <outlet property="questionTableView" destination="G2A-hH-jNV" id="Rwb-eT-1jZ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tr6-C1-UxM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -137,8 +130,8 @@
     </scenes>
     <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
     <resources>
-        <image name="IMG_711860F10C71-1" width="1125" height="2436"/>
         <image name="doc.text" catalog="system" width="115" height="128"/>
         <image name="gear" catalog="system" width="128" height="119"/>
+        <image name="mockup3" width="781" height="1691"/>
     </resources>
 </document>
