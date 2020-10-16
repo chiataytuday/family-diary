@@ -117,35 +117,11 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PQQ-yQ-dej" id="gnM-A0-rZc">
                                     <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L0Q-R1-iWQ">
-                                            <rect key="frame" x="20" y="8.5" width="48" height="24"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ED-hu-ZoZ">
-                                            <rect key="frame" x="78" y="8.5" width="48" height="24"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="L0Q-R1-iWQ" secondAttribute="bottom" id="7Gi-9t-dhT"/>
-                                        <constraint firstItem="L0Q-R1-iWQ" firstAttribute="leading" secondItem="gnM-A0-rZc" secondAttribute="leadingMargin" id="gFk-v1-djY"/>
-                                        <constraint firstItem="4ED-hu-ZoZ" firstAttribute="leading" secondItem="L0Q-R1-iWQ" secondAttribute="trailing" constant="10" id="oYC-nY-K9A"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="4ED-hu-ZoZ" secondAttribute="bottom" id="vbj-lV-9M4"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" id="nAT-CJ-zHp"/>
-                    <connections>
-                        <outlet property="questionDescription" destination="4ED-hu-ZoZ" id="8nZ-Uz-BWu"/>
-                        <outlet property="questionId" destination="L0Q-R1-iWQ" id="hrh-sK-AJL"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tr6-C1-UxM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

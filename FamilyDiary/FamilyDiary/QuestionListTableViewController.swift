@@ -26,9 +26,7 @@ class QuestionListTableViewController: UITableViewController {
 //        // #warning Incomplete implementation, return the number of sections
 //        return 0
 //    }
-    @IBOutlet weak var questionId: UILabel!
-    @IBOutlet weak var questionDescription: UILabel!
-    
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return dummy_Questions.count
@@ -37,6 +35,7 @@ class QuestionListTableViewController: UITableViewController {
   
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionList", for: indexPath)
+        cell.textLabel?.text = dummy_Questions[indexPath.row].questionDescription
         return cell
     }
   
