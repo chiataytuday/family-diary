@@ -16,6 +16,7 @@
 		C6A2FC842515CAA500132F4F /* FamilyDiaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A2FC832515CAA500132F4F /* FamilyDiaryTests.swift */; };
 		C6A2FC8F2515CAA500132F4F /* FamilyDiaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A2FC8E2515CAA500132F4F /* FamilyDiaryUITests.swift */; };
 		EB02C6AE2539A471004B839D /* QuestionListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB02C6AD2539A471004B839D /* QuestionListTableViewController.swift */; };
+		EB544F882539F5E700913722 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544F872539F5E700913722 /* QuestionViewController.swift */; };
 		EBA335422539865E00A3FB7A /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA335412539865E00A3FB7A /* Question.swift */; };
 		EBA335462539868000A3FB7A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA335452539868000A3FB7A /* User.swift */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,7 @@
 		C6A2FC8E2515CAA500132F4F /* FamilyDiaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyDiaryUITests.swift; sourceTree = "<group>"; };
 		C6A2FC902515CAA500132F4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB02C6AD2539A471004B839D /* QuestionListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionListTableViewController.swift; sourceTree = "<group>"; };
+		EB544F872539F5E700913722 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		EBA335412539865E00A3FB7A /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		EBA335452539868000A3FB7A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,6 +125,7 @@
 				C6A2FC772515CAA500132F4F /* LaunchScreen.storyboard */,
 				C6A2FC7A2515CAA500132F4F /* Info.plist */,
 				EB02C6AD2539A471004B839D /* QuestionListTableViewController.swift */,
+				EB544F872539F5E700913722 /* QuestionViewController.swift */,
 			);
 			path = FamilyDiary;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			files = (
 				EBA335422539865E00A3FB7A /* Question.swift in Sources */,
 				C6A2FC712515CAA400132F4F /* ViewController.swift in Sources */,
+				EB544F882539F5E700913722 /* QuestionViewController.swift in Sources */,
 				EBA335462539868000A3FB7A /* User.swift in Sources */,
 				C6A2FC6D2515CAA400132F4F /* AppDelegate.swift in Sources */,
 				C6A2FC6F2515CAA400132F4F /* SceneDelegate.swift in Sources */,
