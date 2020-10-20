@@ -13,8 +13,14 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var questionDescription: UILabel!
     @IBOutlet weak var answerLabel: UILabel!
     
+    @IBOutlet weak var answerTextView: UITextView!
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var testLabel: UILabel! // 잘 저장되는지 확인용
+    
     var question: Question?
     var answers: [Answer]?
+    var answer: String?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +30,17 @@ class QuestionViewController: UIViewController {
         for answer in question!.answers {
              answerLabelPrep += answer.answerDescription
         }
+        
         answerLabel.text = answerLabelPrep
+        
+        answerTextView.layer.borderWidth = 1.0 // 답변 입력하는 곳 테두리줌
     }
     
+    // 답변 저장 버튼 클릭 이벤트
+    @IBAction func saveAnswer(_ sender: Any) {
+        answer = answerTextView.text
+        testLabel.text = answer // 잘 저장되는지 확인용
+    }
     
 
     /*
