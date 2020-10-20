@@ -10,11 +10,23 @@ import UIKit
 
 class QuestionViewController: UIViewController {
 
+    @IBOutlet weak var questionDescription: UILabel!
+    @IBOutlet weak var answerLabel: UILabel!
+    
+    var question: Question?
+    var answers: [Answer]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        questionDescription.text = question?.questionDescription        // Do any additional setup after loading the view.
+        
+        var answerLabelPrep = ""
+        for answer in question!.answers {
+             answerLabelPrep += answer.answerDescription
+        }
+        answerLabel.text = answerLabelPrep
     }
+    
     
 
     /*

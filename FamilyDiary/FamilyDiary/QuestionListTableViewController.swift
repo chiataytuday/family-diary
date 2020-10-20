@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QuestionListTableViewController: UITableViewController {
+class QuestionListTableViewController: UITableViewController  {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,14 +29,30 @@ class QuestionListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return dummy_Questions.count
+        return questionList.count
     }
 
   
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionList", for: indexPath)
-        cell.textLabel?.text = dummy_Questions[indexPath.row].questionDescription
+        var questionDescriptionTextLabel: String
+        if questionList[indexPath.row].userAnswered == true {
+            questionDescriptionTextLabel = String(questionList[indexPath.row].questionId)+"."+questionList[indexPath.row].questionDescription
+        } else {
+            questionDescriptionTextLabel = "미답변."+questionList[indexPath.row].questionDescription
+        }
+        cell.textLabel?.text = questionDescriptionTextLabel
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showDetails", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? QuestionViewController{
+            destination.question = questionList[(tableView.indexPathForSelectedRow?.row)!]
+        }
     }
   
 
