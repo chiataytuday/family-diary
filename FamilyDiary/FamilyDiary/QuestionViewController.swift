@@ -39,6 +39,8 @@ class QuestionViewController: UIViewController {
     // 답변 저장 버튼 클릭 이벤트
     @IBAction func saveAnswer(_ sender: Any) {
         answer = answerTextView.text
+        question?.answers.append(Answer(answeringUserId: 0, answerDescription: answerTextView.text)) // 실제로는 로그인 된 유저의 아이디를 넣어야 함
+        print(question)
         testLabel.text = answer // 잘 저장되는지 확인용
     }
     
