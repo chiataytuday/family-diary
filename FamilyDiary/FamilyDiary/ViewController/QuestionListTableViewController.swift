@@ -45,10 +45,13 @@ class QuestionListTableViewController: UITableViewController  {
         return cell
     }
     
+    //만약 조건 A 일때는 QuestionViewController Scene으로 가고, B 일때는 AnswerViewController로 가는 방법?
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "showDetails", sender: self)
     }
     
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? QuestionViewController{
             destination.question = questionList[(tableView.indexPathForSelectedRow?.row)!]
