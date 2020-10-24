@@ -33,6 +33,8 @@ class QuestionListTableViewController: UITableViewController  {
     }
 
   
+
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionList", for: indexPath)
         var questionDescriptionTextLabel: String
@@ -48,15 +50,29 @@ class QuestionListTableViewController: UITableViewController  {
     //만약 조건 A 일때는 QuestionViewController Scene으로 가고, B 일때는 AnswerViewController로 가는 방법?
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showDetails", sender: self)
+        //if 사용가 답변했을 때
+        if true {
+            performSegue(withIdentifier: "showDetails", sender: indexPath)}
+        else {
+            performSegue(withIdentifier: "showAnswers", sender: indexPath)
+        }
+        //else
+        //perfor "showAnswers"
     }
     
-
+    // 세그웨이 데이터를 as? AnswerViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? QuestionViewController{
             destination.question = questionList[(tableView.indexPathForSelectedRow?.row)!]
+//        if segue.identifier == "showDetails" {
+//            (sender as? IndexPath)?.row // 선택된 셀의 정보
+//        } else if segue.identifier == "showAnswers" {
+//            (sender as? IndexPath)?.row
+//        }
         }
-    }
+//        else if let destination = segue.destination as? AnswerViewController{
+//            destination.question = questionList[(tableView.indexPathForSelectedRow?.row)!]
+//        }
   
 
     /*
@@ -105,3 +121,5 @@ class QuestionListTableViewController: UITableViewController  {
     */
 
 }
+}
+
