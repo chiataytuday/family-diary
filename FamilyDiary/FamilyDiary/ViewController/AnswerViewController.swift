@@ -9,7 +9,10 @@
 import UIKit
 
 class AnswerViewController: UIViewController {
-
+//    var question: Question?
+//    var answers: [Answer]?
+//    
+      
     override func viewDidLoad() {
         super.viewDidLoad()
 
