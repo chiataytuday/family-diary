@@ -12,6 +12,7 @@ class QuestionTableViewCell: UITableViewCell {
 
     @IBOutlet weak var questionID: UILabel!
     @IBOutlet weak var questionDescription: UILabel!
+    @IBOutlet weak var questionAnsweredUser: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -18,7 +18,7 @@ struct Question {
 }
 
 var questionList: [Question] = [
-    Question(questionId: 1, questionDescription: "집이 무너진다면, 가족들을 구한 후 가장 먼저 챙겨 나올 물건 세 가지는?", userAnswered: false, answers: dummy_Answers),
+    Question(questionId: 1, questionDescription: "집이 무너진다면, 가족들을 구한 후 가장 먼저 챙겨 나올 물건 세 가지는?", answeredUsers: [dummyUsers[0],dummyUsers[2]], userAnswered: false, answers: dummy_Answers),
     Question(questionId: 2, questionDescription: "가족과 함께 보고 싶은 인생영화는 무엇인가요?"),
     Question(questionId: 3, questionDescription: "오늘 같은 날씨에 요리해서 먹고 싶은 음식은 무엇인가요?"),
     Question(questionId: 4, questionDescription: "우리 가족을 한 단어로 표현하면?"),

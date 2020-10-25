@@ -15,7 +15,7 @@ class QuestionListTableViewController: UITableViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.rowHeight = UIScreen.main.traitCollection.userInterfaceIdiom == .phone ? 60 : 60
+        self.rowHeight = UIScreen.main.traitCollection.userInterfaceIdiom == .phone ? 70 : 70
         self.tableView.rowHeight = self.rowHeight
         
     }
@@ -36,14 +36,33 @@ class QuestionListTableViewController: UITableViewController  {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionList", for: indexPath)
-//        var questionDescriptionTextLabel: String
-//        if questionList[indexPath.row].userAnswered == true {
-//            questionDescriptionTextLabel = String(questionList[indexPath.row].questionId)+"."+questionList[indexPath.row].questionDescription
-//        } else {
-//            questionDescriptionTextLabel = "미답변."+questionList[indexPath.row].questionDescription
-//        }
-//        cell.textLabel?.text = questionDescriptionTextLabel
+        let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionList", for: indexPath) as! QuestionTableViewCell
+        
+        // 질문 Cell에, 정보 넣는 부분
+        // 질문 번호 부여, 만약 답변 안된 경우 붉은 색으로 미답변 표시
+        if questionList[indexPath.row].userAnswered == true {
+            cell.questionID.text = "질문 \(String(questionList[indexPath.row].questionId))."
+        } else {
+            cell.questionID.text = "미답변."
+            cell.questionID.textColor = UIColor.red
+        }
+        
+    
+        
+        
+        cell.questionDescription.text = questionList[indexPath.row].questionDescription
+        
+        // 답변한 유저 적기
+        var answeredUsersName : String = ""
+        for user in questionList[indexPath.row].answeredUsers  {
+            answeredUsersName += "\(user.name). "
+        }
+        if answeredUsersName == "" {
+            cell.questionAnsweredUser.text = "아직 아무도 답변하지 않았어요."
+        } else {
+            cell.questionAnsweredUser.text = "답변한 사람 : \(answeredUsersName)"
+        }
+        
         return cell
     }
     
