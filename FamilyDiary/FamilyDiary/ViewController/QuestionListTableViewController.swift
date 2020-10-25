@@ -35,13 +35,13 @@ class QuestionListTableViewController: UITableViewController  {
   
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionList", for: indexPath)
-        var questionDescriptionTextLabel: String
-        if questionList[indexPath.row].userAnswered == true {
-            questionDescriptionTextLabel = String(questionList[indexPath.row].questionId)+"."+questionList[indexPath.row].questionDescription
-        } else {
-            questionDescriptionTextLabel = "미답변."+questionList[indexPath.row].questionDescription
-        }
-        cell.textLabel?.text = questionDescriptionTextLabel
+//        var questionDescriptionTextLabel: String
+//        if questionList[indexPath.row].userAnswered == true {
+//            questionDescriptionTextLabel = String(questionList[indexPath.row].questionId)+"."+questionList[indexPath.row].questionDescription
+//        } else {
+//            questionDescriptionTextLabel = "미답변."+questionList[indexPath.row].questionDescription
+//        }
+//        cell.textLabel?.text = questionDescriptionTextLabel
         return cell
     }
     
