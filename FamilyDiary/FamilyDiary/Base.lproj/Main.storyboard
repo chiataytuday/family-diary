@@ -342,17 +342,17 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0J-UY-8Xr">
-                                            <rect key="frame" x="20" y="11" width="55" height="20"/>
+                                            <rect key="frame" x="20" y="11" width="58" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="KgN-Yw-tL3"/>
-                                                <constraint firstAttribute="width" constant="55" id="Qfk-tT-kNh"/>
+                                                <constraint firstAttribute="width" constant="58" id="Qfk-tT-kNh"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8tF-VX-1pm">
-                                            <rect key="frame" x="75" y="11" width="300" height="20"/>
+                                            <rect key="frame" x="78" y="11" width="297" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="Cfn-VN-dyR"/>
                                                 <constraint firstAttribute="width" constant="60" id="JAH-jq-iag"/>
