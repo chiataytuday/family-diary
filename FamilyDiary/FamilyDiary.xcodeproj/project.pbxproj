@@ -21,6 +21,7 @@
 		EB544F882539F5E700913722 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544F872539F5E700913722 /* QuestionViewController.swift */; };
 		EBA335422539865E00A3FB7A /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA335412539865E00A3FB7A /* Question.swift */; };
 		EBA335462539868000A3FB7A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA335452539868000A3FB7A /* User.swift */; };
+		EBC4818225453EC50098BF1C /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC4818125453EC50098BF1C /* QuestionTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		EB544F872539F5E700913722 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		EBA335412539865E00A3FB7A /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		EBA335452539868000A3FB7A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EBC4818125453EC50098BF1C /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 				EB0F81392541508B00F4C83D /* AnswerViewController.swift */,
 				EB02C6AD2539A471004B839D /* QuestionListTableViewController.swift */,
 				EB544F872539F5E700913722 /* QuestionViewController.swift */,
+				EBC4818125453EC50098BF1C /* QuestionTableViewCell.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBA335422539865E00A3FB7A /* Question.swift in Sources */,
+				EBC4818225453EC50098BF1C /* QuestionTableViewCell.swift in Sources */,
 				C6A2FC712515CAA400132F4F /* ViewController.swift in Sources */,
 				EB544F882539F5E700913722 /* QuestionViewController.swift in Sources */,
 				EB0F813A2541508B00F4C83D /* AnswerViewController.swift in Sources */,
