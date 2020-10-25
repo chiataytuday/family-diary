@@ -9,3 +9,5 @@
 * Table View 만들고 각 셀 클릭하면 디테일 뷰  구현하기
 
 ## firebase 서버 구축
+
+* firebase 서버 만들고 ios 앱과 연결
