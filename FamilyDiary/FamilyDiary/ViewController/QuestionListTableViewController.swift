@@ -10,14 +10,14 @@ import UIKit
 
 class QuestionListTableViewController: UITableViewController  {
 
+    var rowHeight : CGFloat!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.rowHeight = UIScreen.main.traitCollection.userInterfaceIdiom == .phone ? 60 : 60
+        self.tableView.rowHeight = self.rowHeight
+        
     }
 
     // MARK: - Table view data source
@@ -37,13 +37,13 @@ class QuestionListTableViewController: UITableViewController  {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionList", for: indexPath)
-        var questionDescriptionTextLabel: String
-        if questionList[indexPath.row].userAnswered == true {
-            questionDescriptionTextLabel = String(questionList[indexPath.row].questionId)+"."+questionList[indexPath.row].questionDescription
-        } else {
-            questionDescriptionTextLabel = "미답변."+questionList[indexPath.row].questionDescription
-        }
-        cell.textLabel?.text = questionDescriptionTextLabel
+//        var questionDescriptionTextLabel: String
+//        if questionList[indexPath.row].userAnswered == true {
+//            questionDescriptionTextLabel = String(questionList[indexPath.row].questionId)+"."+questionList[indexPath.row].questionDescription
+//        } else {
+//            questionDescriptionTextLabel = "미답변."+questionList[indexPath.row].questionDescription
+//        }
+//        cell.textLabel?.text = questionDescriptionTextLabel
         return cell
     }
     
