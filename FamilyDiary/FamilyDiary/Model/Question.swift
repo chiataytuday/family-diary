@@ -32,5 +32,5 @@ var questionList: [Question] = [
     Question(questionId: 12, questionDescription: "최근 한 달 동안 가장 자주 방문하는 장소는?"),
     Question(questionId: 13, questionDescription: "가장 많이 보는 유투브 채널은?"),
     Question(questionId: 14, questionDescription: "쓰면 쓸 수록 마음에 드는 아이템은 무엇인가요?"),
-    Question(questionId: 15, questionDescription: "어린시절 나의 모습을 표현해봅시다."),
+    Question(questionId: 15, questionDescription: "어린시절 나의 모습을 표현해봅시다.")
 ]

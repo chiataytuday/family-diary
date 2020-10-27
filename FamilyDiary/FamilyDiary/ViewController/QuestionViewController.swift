@@ -11,29 +11,30 @@ import UIKit
 class QuestionViewController: UIViewController {
 
     @IBOutlet weak var questionDescription: UILabel!
-    @IBOutlet weak var answerLabel: UILabel!
     
     @IBOutlet weak var answerTextView: UITextView!
     @IBOutlet weak var saveButton: UIButton!
-    @IBOutlet weak var testLabel: UILabel! // 잘 저장되는지 확인용
+    @IBOutlet weak var answeredUsers: UILabel!
     
     var question: Question?
     var answers: [Answer]?
     var answer: String?
-    
+    var answeredUsersLabel: String = ""
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        questionDescription.text = question?.questionDescription        // Do any additional setup after loading the view.
-        
-        var answerLabelPrep = ""
-        for answer in question!.answers {
-             answerLabelPrep += answer.answerDescription
-        }
-        
-        answerLabel.text = answerLabelPrep
-        
-        answerTextView.layer.borderWidth = 1.0 // 답변 입력하는 곳 테두리줌
+        questionDescription.text = question!.questionDescription
+        //질문 답변한 사람 표시하기
+        answeredUserDescription()
+     
+//
+//        answerLabel.text = answerLabelPrep
+        saveButton.layer.cornerRadius = 25
+        saveButton.layer.borderWidth = 2.0
+        answerTextView.layer.borderWidth = 0.5
+        answerTextView.layer.cornerRadius = 10
+
     }
     
     // 답변 저장 버튼 클릭 이벤트
@@ -41,18 +42,30 @@ class QuestionViewController: UIViewController {
         answer = answerTextView.text
         question?.answers.append(Answer(answeringUserId: 0, answerDescription: answerTextView.text)) // 실제로는 로그인 된 유저의 아이디를 넣어야 함
         print(question)
-        testLabel.text = answer // 잘 저장되는지 확인용
     }
     
+    func answeredUserDescription() {
+        var answeredUsersName : String = ""
+        for user in question!.answeredUsers {
+            answeredUsersName += "\(user.name) "
+        }
+        if answeredUsersName == "" {
+            answeredUsers.text = "아직 아무도 답변하지 않았어요."
+        } else {
+            answeredUsers.text = "답변한 유저: \(answeredUsersName)"
+        }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
+    
+//    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+//        let currentText = answerTextView.text ?? ""
+//        guard let stringRange = Range(range, in: currentText) else { return false }
+//
+//        let changedText = currentText.replacingCharacters(in: stringRange, with: text)
+//
+//        return changedText.count <= 16
+//    }
+    //글자 수 제한하기
+    
 
 }

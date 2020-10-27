@@ -42,13 +42,11 @@ class QuestionListTableViewController: UITableViewController  {
         // 질문 번호 부여, 만약 답변 안된 경우 붉은 색으로 미답변 표시
         if questionList[indexPath.row].userAnswered == true {
             cell.questionID.text = "질문 \(String(questionList[indexPath.row].questionId))."
+            cell.questionID.textColor = UIColor.black
         } else {
             cell.questionID.text = "미답변."
             cell.questionID.textColor = UIColor.red
         }
-        
-    
-        
         
         cell.questionDescription.text = questionList[indexPath.row].questionDescription
         
