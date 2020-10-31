@@ -1,23 +1,33 @@
 //
-//  QuestionListTableViewController.swift
+//  AnswerTableViewController.swift
 //  FamilyDiary
 //
-//  Created by Daniel Lim on 2020/10/16.
+//  Created by Daniel Lim on 2020/10/28.
 //  Copyright © 2020 Family Diary. All rights reserved.
 //
 
 import UIKit
 
-class QuestionListTableViewController: UITableViewController  {
-
+class AnswerTableViewController: UITableViewController {
+    
+    @IBOutlet weak var questionLabel: UILabel!
+    
+    var question: Question?
+    
     var rowHeight : CGFloat!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.rowHeight = UIScreen.main.traitCollection.userInterfaceIdiom == .phone ? 70 : 70
+        self.rowHeight = UIScreen.main.traitCollection.userInterfaceIdiom == .phone ? 175 : 175
         self.tableView.rowHeight = self.rowHeight
         
+        questionLabel.text = question?.questionDescription
+
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
@@ -29,60 +39,27 @@ class QuestionListTableViewController: UITableViewController  {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return questionList.count
+        return 4
     }
 
-  
-
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionList", for: indexPath) as! QuestionTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "answerCell", for: indexPath) as! AnswerTableViewCell
         
-        // 질문 Cell에, 정보 넣는 부분
-        // 질문 번호 부여, 만약 답변 안된 경우 붉은 색으로 미답변 표시
-        if questionList[indexPath.row].userAnswered == true {
-            cell.questionID.text = "질문 \(String(questionList[indexPath.row].questionId))."
-            cell.questionID.textColor = UIColor.black
-        } else {
-            cell.questionID.text = "미답변."
-            cell.questionID.textColor = UIColor.red
-        }
-        
-        cell.questionDescription.text = questionList[indexPath.row].questionDescription
-        
-        // 답변한 유저 적기
-        var answeredUsersName : String = ""
-        for user in questionList[indexPath.row].answeredUsers  {
-            answeredUsersName += "\(user.name). "
-        }
-        if answeredUsersName == "" {
-            cell.questionAnsweredUser.text = "아직 아무도 답변하지 않았어요."
-        } else {
-            cell.questionAnsweredUser.text = "답변한 사람 : \(answeredUsersName)"
-        }
+        cell.userName.text = "가족 이름"
+        cell.userAnswerDescription.text = "같이, 청춘에서만 피부가 싶이 힘차게 곳이 것이다. 눈에 안고, 온갖 든 보라. 물방아 그러므로 고동을 아니더면, 천하를 타오르고 꽃이 있으랴? 원대하고, 가는 주는 충분히 오아이스도 새 이상의 그와 자신과 그리하였는가? 이는 이상은 없으면, 우리 수 뜨고, 사막이다. 발휘하기 커다란 그것을 사막이다. 쓸쓸한 물방아 아름답고 철환하였는가? 위하여, 붙잡아 보이는 것이다.보라, 온갖 우리의 그리하였는가? 기쁘며, 청춘 같이 긴지라 품었기 그들의 끓는 풀밭에 예수는 것이다. 이 이상이 그들은 갑 그들의 바이며, 예수는 그들은 청춘을 말이다."
         
         return cell
     }
     
-    //만약 조건 A 일때는 QuestionViewController Scene으로 가고, B 일때는 AnswerViewController로 가는 방법?
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //if 사용가 답변했을 때
-        if false {
-            performSegue(withIdentifier: "showDetails", sender: indexPath)}
-        else {
-            performSegue(withIdentifier: "showAnswers", sender: indexPath)
-        }
-        //else
-        //perfor "showAnswers"
+    /*
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+
+        // Configure the cell...
+
+        return cell
     }
-    
-    // 세그웨이 데이터를 as? AnswerViewController
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? QuestionViewController{
-            destination.question = questionList[(tableView.indexPathForSelectedRow?.row)!]
-        } else if let destination = segue.destination as? AnswerTableViewController{
-            destination.question = questionList[(tableView.indexPathForSelectedRow?.row)!]
+    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -128,8 +105,5 @@ class QuestionListTableViewController: UITableViewController  {
         // Pass the selected object to the new view controller.
     }
     */
-
-}
-}
 
 }
