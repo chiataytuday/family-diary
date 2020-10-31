@@ -15,6 +15,7 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var answerTextView: UITextView!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var answeredUsers: UILabel!
+    @IBOutlet weak var wordCountLabel: UILabel!
     
     var question: Question?
     var answers: [Answer]?
@@ -66,6 +67,25 @@ class QuestionViewController: UIViewController {
 //        return changedText.count <= 16
 //    }
     //글자 수 제한하기
-    
 
+
+}
+
+extension QuestionViewController: UITextViewDelegate {
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+            let currentText = answerTextView.text ?? ""
+            guard let stringRange = Range(range, in: currentText) else { return false }
+    
+            let changedText = currentText.replacingCharacters(in: stringRange, with: text)
+    
+        
+            return changedText.count <= 200
+        
+        }
+    func textViewDidChange(_ textView: UITextView) {
+        wordCountLabel.text = "\(textView.text.count)/200"
+        print(textView.text.count)
+    }
+    
+    
 }
