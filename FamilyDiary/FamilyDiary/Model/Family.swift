@@ -9,10 +9,20 @@
 import Foundation
 
 struct Family {
-    let familyId: Int // 대답한 사람
-    var members: [User]
+    var familyCode : String = "" //    familyCode : String = “b6#4j1!”
+    var familyMembers : [User] = []
+    let familyNumberLimit : Int = 4 //     (4인 가족으로 제한)
+    var initialQuestions : [Question] = questionList
 }
 
-var dummyFamily: [Family] = [
-    Family(familyId: 0, members: [dummyUsers[0],dummyUsers[1],dummyUsers[2],dummyUsers[3]])
-]
+// 로그인을 한 후 가족 구성원이 4명이 모아졌다는 가정하에,
+
+
+
+
+
+
+
+
+
+
