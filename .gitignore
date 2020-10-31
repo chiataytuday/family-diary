@@ -1,2 +1,3 @@
-# ds.store 파일 무시
+# ds.store 파일 무시, xcuserstate 무시
 .DS_Store
+.xcuserstate
