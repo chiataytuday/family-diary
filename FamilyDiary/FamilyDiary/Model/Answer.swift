@@ -12,12 +12,5 @@ struct Answer {
     let answeredUser : User
     var answerDescription: String // 질문의 내용
 }
-//Struct Answer
-//    answeredUser : User
-//    answerDescription : String
-//
 
-var dummy_Answers: [Answer] = [
-    Answer(answeredUser: dummyUsers[0], answerDescription: "헬로우")
 
-]
