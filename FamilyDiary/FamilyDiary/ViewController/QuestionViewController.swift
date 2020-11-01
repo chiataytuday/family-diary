@@ -55,20 +55,7 @@ class QuestionViewController: UIViewController {
         } else {
             answeredUsers.text = "답변한 유저: \(answeredUsersName)"
         }
-
     }
-    
-//    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-//        let currentText = answerTextView.text ?? ""
-//        guard let stringRange = Range(range, in: currentText) else { return false }
-//
-//        let changedText = currentText.replacingCharacters(in: stringRange, with: text)
-//
-//        return changedText.count <= 16
-//    }
-    //글자 수 제한하기
-
-
 }
 
 extension QuestionViewController: UITextViewDelegate {
