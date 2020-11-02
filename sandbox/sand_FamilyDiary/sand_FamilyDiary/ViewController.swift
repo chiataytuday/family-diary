@@ -16,9 +16,16 @@ class ViewController: UIViewController {
         
         let ref = Database.database().reference()
         
-        ref.child("id/age").setValue(19)
+        //ref.child("id/age").setValue(19)
         
-        ref.childByAutoId().setValue(["age":26, "name":"Sungtae", "role":"Son"])
+        //ref.childByAutoId().setValue(["age":26, "name":"Sungtae", "role":"Son"])
+        
+        ref.child("id").observeSingEvent(of: .value)
+            { (snapshot) in
+            let emplyeedata = snapshot.value as?
+                [String:Any]
+            
+        }
     }
     
     override func didReceiveMemoryWarning() {
