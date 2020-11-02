@@ -17,7 +17,6 @@ class ViewController: UIViewController {
     
     let randomString = NSUUID().uuidString
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,15 +36,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func enterCode(_ sender: Any) {
-        // TODO : 입력 창 띄우기
         let alert = UIAlertController(
             title: "코드 입력하기",
             message: "가족 대표에게 받은 코드를 입력해주세요",
             preferredStyle: .alert)
-
+        
         let ok = UIAlertAction(title: "OK", style: .default) { (ok) in
-            // 아래 코드는 확인용으로 해놓은 것! 이제 alert.textFields?[0].text 를 질문 리스트에 넘겨야함! 어떤 변수 하나에 저장해놓고 넘겨야겠지?
-            self.codeLabel.text = alert.textFields?[0].text
+            // TODO : 코드 보냈을 시 없는 패밀리 코드면 리젝시켜야함
+            let code = alert.textFields?[0].text
+            self.performSegue(withIdentifier: "toNextSegue", sender: code) // 다음 질문 리스트 화면으로 이동
         }
         
         let cancel = UIAlertAction(title: "cancel", style: .cancel) { (cancel) in
@@ -61,19 +60,28 @@ class ViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toNextSegue" {
+            // 데이터를 전달할 뷰 컨트롤러가 존재하는지 확인
+            let viewController: TestViewController = segue.destination as! TestViewController
+            let data = sender as? String
+            
+            // 뷰 컨트롤러가 존재한다면 데이터 전달
+            viewController.recievedData = data ?? "send failed"
+        }
+    }
+    
     // 난수 생성 함수
     func randomAlphaNumericString(length: Int) -> String {
         let allowedChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
         let allowedCharsCount = UInt32(allowedChars.count)
         var randomString = ""
-
         for _ in 0..<length {
             let randomNum = Int(arc4random_uniform(allowedCharsCount))
             let randomIndex = allowedChars.index(allowedChars.startIndex, offsetBy: randomNum)
             let newCharacter = allowedChars[randomIndex]
             randomString += String(newCharacter)
         }
-
         return randomString
     }
 }
