@@ -41,14 +41,14 @@ class QuestionViewController: UIViewController {
     // 답변 저장 버튼 클릭 이벤트
     @IBAction func saveAnswer(_ sender: Any) {
         answer = answerTextView.text
-        question?.answers.append(Answer(answeringUserId: 0, answerDescription: answerTextView.text)) // 실제로는 로그인 된 유저의 아이디를 넣어야 함
+        question?.answers.append(Answer(answeredUser: currentUser, answerDescription: answerTextView.text)) // 실제로는 로그인 된 유저의 아이디를 넣어야 함
         print(question)
     }
     
     func answeredUserDescription() {
         var answeredUsersName : String = ""
         for user in question!.answeredUsers {
-            answeredUsersName += "\(user.name) "
+            answeredUsersName += "\(user.userName) "
         }
         if answeredUsersName == "" {
             answeredUsers.text = "아직 아무도 답변하지 않았어요."

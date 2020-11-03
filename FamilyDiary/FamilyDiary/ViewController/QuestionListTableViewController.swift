@@ -12,8 +12,6 @@ class QuestionListTableViewController: UITableViewController  {
     
     var rowHeight : CGFloat!
     
-    var questionsInFamily = exampleFamily.questions // Family 데이터에 저장된 질문들 불러오기
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.rowHeight = UIScreen.main.traitCollection.userInterfaceIdiom == .phone ? 70 : 70
@@ -23,7 +21,7 @@ class QuestionListTableViewController: UITableViewController  {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the 	number of rows
-        return questionsInFamily.count
+        return questionList.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -31,9 +29,11 @@ class QuestionListTableViewController: UITableViewController  {
         // 질문 Cell에, 정보 넣는 부분
         // 질문 번호 부여, 만약 답변 안된 경우 붉은 색으로 미답변 표시
         
-        //        let indexOfPerson1 = people.firstIndex{$0 === person1} // 0
-        if let answeredUser = questionsInFamily[indexPath.row].answeredUsers.first(where: {$0 === currentUser}) {
-            cell.questionID.text = "질문 \(String(exampleFamily.questions[indexPath.row].questionId))."
+        // 만약에, 현재 유저가 대답한 유저에 속해 있다면..
+//        if exampleFamily.questions[indexPath.row].answeredUsers.filter{$0.userName == currentUser.userName}.count > 0 {
+//            
+        if true {
+            cell.questionID.text = "질문 \(String(questionList[indexPath.row].questionId))."
             cell.questionID.textColor = UIColor.black
         } else {
             cell.questionID.text = "미답변."
@@ -44,8 +44,8 @@ class QuestionListTableViewController: UITableViewController  {
         
         // 답변한 유저 적기
         var answeredUsersName : String = ""
-        for user in questionList[indexPath.row].answeredUsers  {
-            answeredUsersName += "\(user.name). "
+        for answer in  answerList[indexPath.row] {
+            answeredUsersName += "\(answer.answeredUser.userName)."
         }
         if answeredUsersName == "" {
             cell.questionAnsweredUser.text = "아직 아무도 답변하지 않았어요."
@@ -59,12 +59,13 @@ class QuestionListTableViewController: UITableViewController  {
     //만약 조건 A 일때는 QuestionViewController Scene으로 가고, B 일때는 AnswerViewController로 가는 방법?
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //if 사용가 답변했을 때
-        if false {
-            performSegue(withIdentifier: "showDetails", sender: indexPath)}
-        else {
-            performSegue(withIdentifier: "showAnswers", sender: indexPath)
-        }
+        // 사용자가 답변을 완료 했을 때
+//        
+//        if checkIfCurrentUserAnswered(answerArray: <#T##[Answer]#>) {
+//            performSegue(withIdentifier: "showDetails", sender: indexPath)}
+//        else {
+//            performSegue(withIdentifier: "showAnswers", sender: indexPath)
+//        }
         //else
         //perfor "showAnswers"
     }
@@ -75,10 +76,19 @@ class QuestionListTableViewController: UITableViewController  {
             destination.question = questionList[(tableView.indexPathForSelectedRow?.row)!]
         } else if let destination = segue.destination as? AnswerTableViewController{
             destination.question = questionList[(tableView.indexPathForSelectedRow?.row)!]
-
- 
-}
+        }
 }
 
+    // 질문의 배열에서 현재 유저가 들어잇는가
+    func checkIfCurrentUserAnswered(answerArray: [Answer]) -> Bool {
+        var userExistsInAnswer = false
+        for answer in answerArray {
+            if answer.answeredUser.userName == currentUser.userName {
+                userExistsInAnswer != userExistsInAnswer
+            }
+        }
+        
+        return userExistsInAnswer
+    }
     
 }
