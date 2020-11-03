@@ -30,9 +30,7 @@ class QuestionListTableViewController: UITableViewController  {
         // 질문 번호 부여, 만약 답변 안된 경우 붉은 색으로 미답변 표시
         
         // 만약에, 현재 유저가 대답한 유저에 속해 있다면..
-//        if exampleFamily.questions[indexPath.row].answeredUsers.filter{$0.userName == currentUser.userName}.count > 0 {
-//            
-        if true {
+        if checkIfCurrentUserAnswered(answerArray: answerList[indexPath.row]) {
             cell.questionID.text = "질문 \(String(questionList[indexPath.row].questionId))."
             cell.questionID.textColor = UIColor.black
         } else {
@@ -60,35 +58,29 @@ class QuestionListTableViewController: UITableViewController  {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // 사용자가 답변을 완료 했을 때
-//        
-//        if checkIfCurrentUserAnswered(answerArray: <#T##[Answer]#>) {
-//            performSegue(withIdentifier: "showDetails", sender: indexPath)}
-//        else {
-//            performSegue(withIdentifier: "showAnswers", sender: indexPath)
-//        }
-        //else
-        //perfor "showAnswers"
+
+        if checkIfCurrentUserAnswered(answerArray: answerList[indexPath.row]) {
+            performSegue(withIdentifier: "showAnswers", sender: indexPath)}
+        else {
+            performSegue(withIdentifier: "showDetails", sender: indexPath)
+            
+        }
     }
     
     // 세그웨이 데이터를 as? AnswerViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? QuestionViewController{
+            destination.answers = answerList[(tableView.indexPathForSelectedRow?.row)!]
             destination.question = questionList[(tableView.indexPathForSelectedRow?.row)!]
+            destination.row = (tableView.indexPathForSelectedRow?.row)!
         } else if let destination = segue.destination as? AnswerTableViewController{
+            destination.answers = answerList[(tableView.indexPathForSelectedRow?.row)!]
             destination.question = questionList[(tableView.indexPathForSelectedRow?.row)!]
+            destination.row = (tableView.indexPathForSelectedRow?.row)!
         }
 }
 
     // 질문의 배열에서 현재 유저가 들어잇는가
-    func checkIfCurrentUserAnswered(answerArray: [Answer]) -> Bool {
-        var userExistsInAnswer = false
-        for answer in answerArray {
-            if answer.answeredUser.userName == currentUser.userName {
-                userExistsInAnswer != userExistsInAnswer
-            }
-        }
-        
-        return userExistsInAnswer
-    }
+    
     
 }

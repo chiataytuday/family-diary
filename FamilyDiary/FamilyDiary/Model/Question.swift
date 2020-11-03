@@ -11,8 +11,6 @@ import Foundation
 struct Question {
     let questionId: Int
     let questionDescription: String
-    var answeredUsers: [User] = []
-    var answers: [Answer] = []
 }
 
 

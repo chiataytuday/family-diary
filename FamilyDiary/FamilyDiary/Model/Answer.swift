@@ -13,4 +13,14 @@ struct Answer {
     var answerDescription: String // 질문의 내용
 }
 
+func checkIfCurrentUserAnswered(answerArray: [Answer]) -> Bool {
+    var userExistsInAnswer = false
+    for answer in answerArray {
+        if answer.answeredUser.userName == currentUser.userName {
+            userExistsInAnswer = true
+        }
+    }
+    return userExistsInAnswer
+}
+
 
