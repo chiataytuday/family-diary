@@ -487,13 +487,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2N86B853KH;
+				DEVELOPMENT_TEAM = 4QG3GC35LA;
 				INFOPLIST_FILE = FamilyDiary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = limdan7.FamilyDiary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sungtae.familydiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -505,13 +505,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2N86B853KH;
+				DEVELOPMENT_TEAM = 4QG3GC35LA;
 				INFOPLIST_FILE = FamilyDiary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = limdan7.FamilyDiary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sungtae.familydiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
