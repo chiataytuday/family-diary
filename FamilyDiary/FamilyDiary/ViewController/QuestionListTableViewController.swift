@@ -16,7 +16,6 @@ class QuestionListTableViewController: UITableViewController  {
         super.viewDidLoad()
         self.rowHeight = UIScreen.main.traitCollection.userInterfaceIdiom == .phone ? 70 : 70
         self.tableView.rowHeight = self.rowHeight
-        
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

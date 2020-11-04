@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9788F0BB253BEF9100E33EC9 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9788F0BA253BEF9100E33EC9 /* Answer.swift */; };
+		B36809812552DD7600DDC3C2 /* CodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36809802552DD7600DDC3C2 /* CodeViewController.swift */; };
+		B368098E2552E69F00DDC3C2 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B368098D2552E69F00DDC3C2 /* TabBarViewController.swift */; };
 		C6A2FC6D2515CAA400132F4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A2FC6C2515CAA400132F4F /* AppDelegate.swift */; };
 		C6A2FC6F2515CAA400132F4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A2FC6E2515CAA400132F4F /* SceneDelegate.swift */; };
 		C6A2FC712515CAA400132F4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A2FC702515CAA400132F4F /* ViewController.swift */; };
@@ -45,6 +47,8 @@
 
 /* Begin PBXFileReference section */
 		9788F0BA253BEF9100E33EC9 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		B36809802552DD7600DDC3C2 /* CodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewController.swift; sourceTree = "<group>"; };
+		B368098D2552E69F00DDC3C2 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		C6A2FC692515CAA400132F4F /* FamilyDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FamilyDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6A2FC6C2515CAA400132F4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6A2FC6E2515CAA400132F4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +171,8 @@
 				EBC4818125453EC50098BF1C /* QuestionTableViewCell.swift */,
 				EB2BF5CF254942D400EB55BF /* AnswerTableViewController.swift */,
 				EB2BF5D42549430B00EB55BF /* AnswerTableViewCell.swift */,
+				B36809802552DD7600DDC3C2 /* CodeViewController.swift */,
+				B368098D2552E69F00DDC3C2 /* TabBarViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -306,10 +312,12 @@
 				EBC4818225453EC50098BF1C /* QuestionTableViewCell.swift in Sources */,
 				C6A2FC712515CAA400132F4F /* ViewController.swift in Sources */,
 				EB544F882539F5E700913722 /* QuestionViewController.swift in Sources */,
+				B368098E2552E69F00DDC3C2 /* TabBarViewController.swift in Sources */,
 				EBA335462539868000A3FB7A /* User.swift in Sources */,
 				EB1E10AA254BE9660076E6F0 /* Family.swift in Sources */,
 				C6A2FC6D2515CAA400132F4F /* AppDelegate.swift in Sources */,
 				C6A2FC6F2515CAA400132F4F /* SceneDelegate.swift in Sources */,
+				B36809812552DD7600DDC3C2 /* CodeViewController.swift in Sources */,
 				EB2BF5D0254942D400EB55BF /* AnswerTableViewController.swift in Sources */,
 				EB02C6AE2539A471004B839D /* QuestionListTableViewController.swift in Sources */,
 				EB2BF5D52549430B00EB55BF /* AnswerTableViewCell.swift in Sources */,

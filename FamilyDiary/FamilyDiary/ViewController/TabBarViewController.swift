@@ -10,10 +10,11 @@ import UIKit
 
 class TabBarViewController: UITabBarController {
 
+    var receiveFamilyCode = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        print(receiveFamilyCode) // 받아온거 확인!
     }
     
 
