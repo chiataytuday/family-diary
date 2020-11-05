@@ -11,6 +11,7 @@ import FirebaseDatabase // FirebaseDatabase 가져오기 [성태]
 
 class AnswerTableViewController: UITableViewController {
     
+
     @IBOutlet weak var questionLabel: UILabel!
     
     var row : Int?
@@ -59,6 +60,20 @@ class AnswerTableViewController: UITableViewController {
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+
+
+            return nil
+        }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? AnswerRevisionViewController{
+            destination.answers = answers
+            destination.question = question
+            destination.row = row
+        }
+}
     
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

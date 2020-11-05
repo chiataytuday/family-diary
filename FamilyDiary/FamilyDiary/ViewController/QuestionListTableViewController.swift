@@ -16,7 +16,6 @@ class QuestionListTableViewController: UITableViewController  {
         super.viewDidLoad()
         self.rowHeight = UIScreen.main.traitCollection.userInterfaceIdiom == .phone ? 70 : 70
         self.tableView.rowHeight = self.rowHeight
-        
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -30,7 +29,7 @@ class QuestionListTableViewController: UITableViewController  {
         // 질문 번호 부여, 만약 답변 안된 경우 붉은 색으로 미답변 표시
         
         // 만약에, 현재 유저가 대답한 유저에 속해 있다면..
-        if checkIfCurrentUserAnswered(answerArray: answerList[indexPath.row]) {
+        if checkIfCurrentUserAnswered(answerArray: exampleFamily.answers[indexPath.row]) {
             cell.questionID.text = "질문 \(String(questionList[indexPath.row].questionId))."
             cell.questionID.textColor = UIColor.black
         } else {
@@ -42,7 +41,7 @@ class QuestionListTableViewController: UITableViewController  {
         
         // 답변한 유저 적기
         var answeredUsersName : String = ""
-        for answer in  answerList[indexPath.row] {
+        for answer in  exampleFamily.answers[indexPath.row] {
             answeredUsersName += "\(answer.answeredUser.userName)."
         }
         if answeredUsersName == "" {
@@ -59,7 +58,7 @@ class QuestionListTableViewController: UITableViewController  {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // 사용자가 답변을 완료 했을 때
 
-        if checkIfCurrentUserAnswered(answerArray: answerList[indexPath.row]) {
+        if checkIfCurrentUserAnswered(answerArray: exampleFamily.answers[indexPath.row]) {
             performSegue(withIdentifier: "showAnswers", sender: indexPath)}
         else {
             performSegue(withIdentifier: "showDetails", sender: indexPath)
@@ -70,11 +69,11 @@ class QuestionListTableViewController: UITableViewController  {
     // 세그웨이 데이터를 as? AnswerViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? QuestionViewController{
-            destination.answers = answerList[(tableView.indexPathForSelectedRow?.row)!]
+            destination.answers = exampleFamily.answers[(tableView.indexPathForSelectedRow?.row)!]
             destination.question = questionList[(tableView.indexPathForSelectedRow?.row)!]
             destination.row = (tableView.indexPathForSelectedRow?.row)!
         } else if let destination = segue.destination as? AnswerTableViewController{
-            destination.answers = answerList[(tableView.indexPathForSelectedRow?.row)!]
+            destination.answers = exampleFamily.answers[(tableView.indexPathForSelectedRow?.row)!]
             destination.question = questionList[(tableView.indexPathForSelectedRow?.row)!]
             destination.row = (tableView.indexPathForSelectedRow?.row)!
         }

@@ -11,6 +11,8 @@
 		97737E042552BD6100D7169C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97737E032552BD6100D7169C /* GoogleService-Info.plist */; };
 		9788F0BB253BEF9100E33EC9 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9788F0BA253BEF9100E33EC9 /* Answer.swift */; };
 		C25FE90C5C66BE83047B5B10 /* Pods_FamilyDiary_FamilyDiaryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F53934059930F9D53D1D592 /* Pods_FamilyDiary_FamilyDiaryUITests.framework */; };
+		B311F2E62553D3070018992D /* CodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B311F2E42553D3070018992D /* CodeViewController.swift */; };
+		B311F2E72553D3070018992D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B311F2E52553D3070018992D /* TabBarViewController.swift */; };
 		C6A2FC6D2515CAA400132F4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A2FC6C2515CAA400132F4F /* AppDelegate.swift */; };
 		C6A2FC6F2515CAA400132F4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A2FC6E2515CAA400132F4F /* SceneDelegate.swift */; };
 		C6A2FC712515CAA400132F4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A2FC702515CAA400132F4F /* ViewController.swift */; };
@@ -22,6 +24,7 @@
 		DF7F4E8CEFE7FB8F87FED8DD /* Pods_FamilyDiaryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A017177CDD54A63C70BF4A56 /* Pods_FamilyDiaryTests.framework */; };
 		EB02C6AE2539A471004B839D /* QuestionListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB02C6AD2539A471004B839D /* QuestionListTableViewController.swift */; };
 		EB1E10AA254BE9660076E6F0 /* Family.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1E10A9254BE9660076E6F0 /* Family.swift */; };
+		EB200E1325527E5300B4533E /* AnswerRevisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB200E1225527E5300B4533E /* AnswerRevisionViewController.swift */; };
 		EB2BF5D0254942D400EB55BF /* AnswerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2BF5CF254942D400EB55BF /* AnswerTableViewController.swift */; };
 		EB2BF5D52549430B00EB55BF /* AnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2BF5D42549430B00EB55BF /* AnswerTableViewCell.swift */; };
 		EB544F882539F5E700913722 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544F872539F5E700913722 /* QuestionViewController.swift */; };
@@ -58,6 +61,8 @@
 		97737E032552BD6100D7169C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9788F0BA253BEF9100E33EC9 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		A017177CDD54A63C70BF4A56 /* Pods_FamilyDiaryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FamilyDiaryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B311F2E42553D3070018992D /* CodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeViewController.swift; sourceTree = "<group>"; };
+		B311F2E52553D3070018992D /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		C6A2FC692515CAA400132F4F /* FamilyDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FamilyDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6A2FC6C2515CAA400132F4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6A2FC6E2515CAA400132F4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +79,7 @@
 		C6A2FC902515CAA500132F4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB02C6AD2539A471004B839D /* QuestionListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionListTableViewController.swift; sourceTree = "<group>"; };
 		EB1E10A9254BE9660076E6F0 /* Family.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Family.swift; sourceTree = "<group>"; };
+		EB200E1225527E5300B4533E /* AnswerRevisionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerRevisionViewController.swift; sourceTree = "<group>"; };
 		EB2BF5CF254942D400EB55BF /* AnswerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTableViewController.swift; sourceTree = "<group>"; };
 		EB2BF5D42549430B00EB55BF /* AnswerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTableViewCell.swift; sourceTree = "<group>"; };
 		EB544F872539F5E700913722 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
@@ -210,7 +216,10 @@
 				EB544F872539F5E700913722 /* QuestionViewController.swift */,
 				EBC4818125453EC50098BF1C /* QuestionTableViewCell.swift */,
 				EB2BF5CF254942D400EB55BF /* AnswerTableViewController.swift */,
+				B311F2E42553D3070018992D /* CodeViewController.swift */,
+				B311F2E52553D3070018992D /* TabBarViewController.swift */,
 				EB2BF5D42549430B00EB55BF /* AnswerTableViewCell.swift */,
+				EB200E1225527E5300B4533E /* AnswerRevisionViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -456,6 +465,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBA335422539865E00A3FB7A /* Question.swift in Sources */,
+				B311F2E62553D3070018992D /* CodeViewController.swift in Sources */,
 				EBC4818225453EC50098BF1C /* QuestionTableViewCell.swift in Sources */,
 				C6A2FC712515CAA400132F4F /* ViewController.swift in Sources */,
 				EB544F882539F5E700913722 /* QuestionViewController.swift in Sources */,
@@ -466,6 +476,8 @@
 				EB2BF5D0254942D400EB55BF /* AnswerTableViewController.swift in Sources */,
 				EB02C6AE2539A471004B839D /* QuestionListTableViewController.swift in Sources */,
 				EB2BF5D52549430B00EB55BF /* AnswerTableViewCell.swift in Sources */,
+				EB200E1325527E5300B4533E /* AnswerRevisionViewController.swift in Sources */,
+				B311F2E72553D3070018992D /* TabBarViewController.swift in Sources */,
 				9788F0BB253BEF9100E33EC9 /* Answer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -641,13 +653,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4QG3GC35LA;
+				DEVELOPMENT_TEAM = 2N86B853KH;
 				INFOPLIST_FILE = FamilyDiary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sungtae.familydiary;
+				PRODUCT_BUNDLE_IDENTIFIER = limdan7.FamilyDiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -660,13 +672,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4QG3GC35LA;
+				DEVELOPMENT_TEAM = 2N86B853KH;
 				INFOPLIST_FILE = FamilyDiary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sungtae.familydiary;
+				PRODUCT_BUNDLE_IDENTIFIER = limdan7.FamilyDiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
