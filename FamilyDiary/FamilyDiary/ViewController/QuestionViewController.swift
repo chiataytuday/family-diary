@@ -7,16 +7,17 @@
 //
 
 import UIKit
+import FirebaseDatabase // FirebaseDatabase 추가하기 [성태]
 
 class QuestionViewController: UIViewController {
 
     @IBOutlet weak var questionDescription: UILabel!
-    
     @IBOutlet weak var answerTextView: UITextView!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var answeredUsers: UILabel!
     @IBOutlet weak var wordCountLabel: UILabel!
     
+    var ref: DatabaseReference? // 인스턴스 [셩태]
     var row: Int?
     var question: Question?
     var answers: [Answer]?
@@ -26,6 +27,8 @@ class QuestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ref = Database.database().reference()   // 인스턴스 [성태]
         questionDescription.text = question!.questionDescription
         //질문 답변한 사람 표시하기
         answeredUserDescription()
@@ -36,13 +39,20 @@ class QuestionViewController: UIViewController {
         saveButton.layer.borderWidth = 2.0
         answerTextView.layer.borderWidth = 0.5
         answerTextView.layer.cornerRadius = 10
+        
+        
 
     }
     
     // 답변 저장 버튼 클릭 이벤트
     @IBAction func saveAnswer(_ sender: Any) {
+    
+        
         answerList[row!].append(Answer(answeredUser: currentUser, answerDescription: answerTextView.text))
         print(answerList)
+        
+        ref?.child("answerLists").childByAutoId().setValue(answerTextView.text) // 답변저장 누르면 내용 전송    [성태]
+        
         
 //        answer = answerTextView.text
 //        question?.answers.append(Answer(answeredUser: currentUser, answerDescription: answerTextView.text)) // 실제로는 로그인 된 유저의 아이디를 넣어야 함

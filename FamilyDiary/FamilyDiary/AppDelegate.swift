@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import Firebase // Firebase 불러오기 [성태]
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        FirebaseApp.configure() // Firebase 연결 (초기화 코드)- Firebase db로 읽고 쓰기 가능 [성태]
+        
         return true
     }
 
