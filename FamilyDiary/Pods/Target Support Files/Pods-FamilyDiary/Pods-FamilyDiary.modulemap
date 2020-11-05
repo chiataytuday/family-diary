@@ -1,0 +1,6 @@
+framework module Pods_FamilyDiary {
+  umbrella header "Pods-FamilyDiary-umbrella.h"
+
+  export *
+  module * { export * }
+}

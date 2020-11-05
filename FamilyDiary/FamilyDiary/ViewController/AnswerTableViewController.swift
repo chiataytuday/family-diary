@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase // FirebaseDatabase 가져오기 [성태]
 
 class AnswerTableViewController: UITableViewController {
     
@@ -19,12 +20,18 @@ class AnswerTableViewController: UITableViewController {
     
     var rowHeight : CGFloat!
     
+    var ref: DatabaseReference? // 인스턴스 [셩태]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.rowHeight = UIScreen.main.traitCollection.userInterfaceIdiom == .phone ? 175 : 175
         self.tableView.rowHeight = self.rowHeight
         
+        
         questionLabel.text = question?.questionDescription
+        
+        ref = Database.database().reference()   // 인스턴스 [성태]
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -49,6 +56,7 @@ class AnswerTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "answerCell", for: indexPath) as! AnswerTableViewCell
         cell.userName.text = answers![indexPath.row].answeredUser.userName
         cell.userAnswerDescription.text = answers![indexPath.row].answerDescription
+    
         
         return cell
     }

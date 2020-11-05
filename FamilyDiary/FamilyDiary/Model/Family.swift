@@ -10,7 +10,7 @@ import Foundation
 
 struct Family {
     var familyCode : String = "" //    familyCode : String = “b6#4j1!”
-    var familyMembers : [User] = []
+    var familyMembers : [User] = [] //
     let familyNumberLimit : Int = 4 //     (4인 가족으로 제한)
     var answers : [[Answer]] = answerList
 }
@@ -31,6 +31,7 @@ var questionList: [Question] = [
     Question(questionId: 9, questionDescription: "위인을 한 명 만날 수 있나면 누굴 만날건가요?"),
     Question(questionId: 10, questionDescription: "현재의 나의 가장 큰 고민은?")
 ]
+
 // 아직 빈 정답 리스트
 var answerList: [[Answer]] = [
     [],
