@@ -40,8 +40,8 @@ class QuestionViewController: UIViewController {
     
     // 답변 저장 버튼 클릭 이벤트
     @IBAction func saveAnswer(_ sender: Any) {
-        answerList[row!].append(Answer(answeredUser: currentUser, answerDescription: answerTextView.text))
-        print(answerList)
+        exampleFamily.answers[row!].append(Answer(answeredUser: currentUser, answerDescription: answerTextView.text))
+        print(exampleFamily.answers)
         navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
     }

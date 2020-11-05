@@ -168,7 +168,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="4Kc-iG-cFh">
-                        <barButtonItem key="rightBarButtonItem" title="수정하기" id="gaa-oK-7My">
+                        <barButtonItem key="rightBarButtonItem" title="답변 수정하기" id="gaa-oK-7My">
                             <connections>
                                 <segue destination="BJy-Kg-kg1" kind="presentation" id="ilO-wp-NKO"/>
                             </connections>

@@ -17,7 +17,7 @@ class AnswerRevisionViewController: UIViewController {
     @IBOutlet weak var answerTextView: UITextView!
     
     @IBAction func saveButton(_ sender: Any) {
-        answerList[row!][findIndexOfAnswer()] = Answer(answeredUser: currentUser, answerDescription: answerTextView.text)
+        exampleFamily.answers[row!][findIndexOfAnswer()] = Answer(answeredUser: currentUser, answerDescription: answerTextView.text)
         navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
     }
@@ -53,8 +53,8 @@ class AnswerRevisionViewController: UIViewController {
     
 //
 //    @IBAction func saveAnswer(_ sender: Any) {
-//        answerList[row!].append(Answer(answeredUser: currentUser, answerDescription: answerTextView.text))
-//        print(answerList)
+//        exampleFamily.answers[row!].append(Answer(answeredUser: currentUser, answerDescription: answerTextView.text))
+//        print(exampleFamily.answers)
 //        navigationController?.popViewController(animated: true)
 //        dismiss(animated: true, completion: nil)
 //    }
