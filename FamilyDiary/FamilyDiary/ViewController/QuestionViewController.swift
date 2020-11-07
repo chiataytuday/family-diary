@@ -43,6 +43,10 @@ class QuestionViewController: UIViewController {
         answerTextView.textContainerInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     }
     
+    @IBAction func closeModal(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+
+    }
     // 답변 저장 버튼 클릭 이벤트
     @IBAction func saveAnswer(_ sender: Any) {
 
