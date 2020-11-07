@@ -27,7 +27,7 @@ class QuestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        saveButton.isEnabled = false
         ref = Database.database().reference()   // 인스턴스 [성태]
         questionDescription.text = question!.questionDescription
         //질문 답변한 사람 표시하기
@@ -37,6 +37,7 @@ class QuestionViewController: UIViewController {
 //        answerLabel.text = answerLabelPrep
         saveButton.layer.cornerRadius = 25
         saveButton.layer.borderWidth = 2.0
+        saveButton.layer.borderColor = UIColor.lightGray.cgColor
         answerTextView.layer.borderWidth = 0.5
         answerTextView.layer.cornerRadius = 10
 
@@ -49,12 +50,8 @@ class QuestionViewController: UIViewController {
     }
     // 답변 저장 버튼 클릭 이벤트
     @IBAction func saveAnswer(_ sender: Any) {
+        
 
-    
-        
-        answerList[row!].append(Answer(answeredUser: currentUser, answerDescription: answerTextView.text))
-        print(answerList)
-        
         // ref?.child("answerLists").childByAutoId().setValue(answerTextView.text) // 답변저장 누르면 내용 전송    [성태]
         
         
@@ -101,11 +98,19 @@ extension QuestionViewController: UITextViewDelegate {
     
             let changedText = currentText.replacingCharacters(in: stringRange, with: text)
     
-        
             return changedText.count <= 200
         
         }
     func textViewDidChange(_ textView: UITextView) {
+        if textView.text.count < 5 {
+            wordCountLabel.text = "최소 5자 이상 입력 \(textView.text.count)/200"
+            saveButton.isEnabled = false
+            saveButton.layer.borderColor = UIColor.lightGray.cgColor
+        } else{
         wordCountLabel.text = "\(textView.text.count)/200"
+            saveButton.isEnabled = true
+            saveButton.layer.borderColor = UIColor.black.cgColor
+        }
+
     }
 }
