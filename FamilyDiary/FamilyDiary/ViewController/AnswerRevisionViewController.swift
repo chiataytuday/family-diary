@@ -23,6 +23,10 @@ class AnswerRevisionViewController: UIViewController {
     }
     
     
+    @IBAction func closeModal(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+
+    }
     
     
     var row: Int?
