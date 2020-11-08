@@ -23,6 +23,10 @@ class AnswerRevisionViewController: UIViewController {
     }
     
     
+    @IBAction func closeModal(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+
+    }
     
     
     var row: Int?
@@ -89,6 +93,14 @@ extension AnswerRevisionViewController: UITextViewDelegate {
         
         }
     func textViewDidChange(_ textView: UITextView) {
+        if textView.text.count < 5 {
+            wordCounterLabel.text = "최소 5자 이상 입력 \(textView.text.count)/200"
+            saveButton.isEnabled = false
+            saveButton.layer.borderColor = UIColor.lightGray.cgColor
+        } else{
         wordCounterLabel.text = "\(textView.text.count)/200"
+            saveButton.isEnabled = true
+            saveButton.layer.borderColor = UIColor.black.cgColor
+        }
     }
 }
