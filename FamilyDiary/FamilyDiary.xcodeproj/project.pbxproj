@@ -12,6 +12,7 @@
 		9788F0BB253BEF9100E33EC9 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9788F0BA253BEF9100E33EC9 /* Answer.swift */; };
 		B311F2E62553D3070018992D /* CodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B311F2E42553D3070018992D /* CodeViewController.swift */; };
 		B311F2E72553D3070018992D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B311F2E52553D3070018992D /* TabBarViewController.swift */; };
+		B3D8DD892557B5FE00E4E37A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D8DD882557B5FE00E4E37A /* ProfileViewController.swift */; };
 		C25FE90C5C66BE83047B5B10 /* Pods_FamilyDiary_FamilyDiaryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F53934059930F9D53D1D592 /* Pods_FamilyDiary_FamilyDiaryUITests.framework */; };
 		C6A2FC6D2515CAA400132F4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A2FC6C2515CAA400132F4F /* AppDelegate.swift */; };
 		C6A2FC6F2515CAA400132F4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A2FC6E2515CAA400132F4F /* SceneDelegate.swift */; };
@@ -64,6 +65,7 @@
 		A017177CDD54A63C70BF4A56 /* Pods_FamilyDiaryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FamilyDiaryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B311F2E42553D3070018992D /* CodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeViewController.swift; sourceTree = "<group>"; };
 		B311F2E52553D3070018992D /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		B3D8DD882557B5FE00E4E37A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C6A2FC692515CAA400132F4F /* FamilyDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FamilyDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6A2FC6C2515CAA400132F4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6A2FC6E2515CAA400132F4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				B311F2E52553D3070018992D /* TabBarViewController.swift */,
 				EB2BF5D42549430B00EB55BF /* AnswerTableViewCell.swift */,
 				EB200E1225527E5300B4533E /* AnswerRevisionViewController.swift */,
+				B3D8DD882557B5FE00E4E37A /* ProfileViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				C6A2FC712515CAA400132F4F /* ViewController.swift in Sources */,
 				EB544F882539F5E700913722 /* QuestionViewController.swift in Sources */,
 				EBA335462539868000A3FB7A /* User.swift in Sources */,
+				B3D8DD892557B5FE00E4E37A /* ProfileViewController.swift in Sources */,
 				EB1E10AA254BE9660076E6F0 /* Family.swift in Sources */,
 				C6A2FC6D2515CAA400132F4F /* AppDelegate.swift in Sources */,
 				C6A2FC6F2515CAA400132F4F /* SceneDelegate.swift in Sources */,

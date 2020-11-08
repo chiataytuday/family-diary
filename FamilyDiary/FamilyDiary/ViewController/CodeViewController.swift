@@ -45,7 +45,7 @@ class CodeViewController: UIViewController {
         let ok = UIAlertAction(title: "OK", style: .default) { (ok) in
             let code = alert.textFields?[0].text
             // TODO : 여기서 입력받은 code 변수의 데이터가 유효한 패밀리 코드인지 확인하고, 없는 패밀리 코드면 리젝시켜야함
-            self.performSegue(withIdentifier: "toQuestionList", sender: code) // 다음 질문 리스트 화면으로 이동
+            self.performSegue(withIdentifier: "toProfile", sender: code) // 다음 질문 리스트 화면으로 이동
         }
 
         let cancel = UIAlertAction(title: "cancel", style: .cancel) { (cancel) in
@@ -63,13 +63,13 @@ class CodeViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toQuestionList" {
+        if segue.identifier == "toProfile" {
             // 데이터를 전달할 뷰 컨트롤러가 존재하는지 확인
-            let tabBarController = segue.destination as! TabBarViewController
+            let profileViewController = segue.destination as! ProfileViewController
             let data = sender as? String
 
             // 뷰 컨트롤러가 존재한다면 데이터 전달
-            tabBarController.receiveFamilyCode = data ?? "send failed"
+            profileViewController.receiveFamilyCode = data ?? "send failed"
         }
     }
     
