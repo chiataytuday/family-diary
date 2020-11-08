@@ -51,16 +51,19 @@ class QuestionViewController: UIViewController {
         answerList[row!].append(Answer(answeredUser: currentUser, answerDescription: answerTextView.text))
         print(answerList)
         
-        // ref?.child("answerLists").childByAutoId().setValue(answerTextView.text) // 답변저장 누르면 내용 전송    [성태]
+        //ref?.child("answerLists").childByAutoId().setValue(answerTextView.text) // 답변저장 누르면 내용 전송  Set value  [성태]
         
+        ref?.child("answerLists").childByAutoId().setValue(answerTextView.text, withCompletionBlock: { (error, ref) in
+            exampleFamily.answers[self.row!].append(Answer(answeredUser: currentUser, answerDescription: self.answerTextView.text))
+            print(exampleFamily.answers)
+            self.navigationController?.popViewController(animated: true)
+            self.dismiss(animated: true, completion: nil)
+        })
         
 //        answer = answerTextView.text
 //        question?.answers.append(Answer(answeredUser: currentUser, answerDescription: answerTextView.text)) // 실제로는 로그인 된 유저의 아이디를 넣어야 함
 //        print(question)
-        exampleFamily.answers[row!].append(Answer(answeredUser: currentUser, answerDescription: answerTextView.text))
-        print(exampleFamily.answers)
-        navigationController?.popViewController(animated: true)
-        dismiss(animated: true, completion: nil)
+        
 
     }
     
