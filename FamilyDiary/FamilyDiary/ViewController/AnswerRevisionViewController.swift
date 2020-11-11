@@ -16,18 +16,21 @@ class AnswerRevisionViewController: UIViewController {
     @IBOutlet weak var answeredUser: UILabel!
     @IBOutlet weak var answerTextView: UITextView!
     
+    var doneRevising : (() -> ())?
+    
     @IBAction func saveButton(_ sender: Any) {
         exampleFamily.answers[row!][findIndexOfAnswer()] = Answer(answeredUser: currentUser, answerDescription: answerTextView.text)
-        navigationController?.popViewController(animated: true)
+        if let doneRevising = doneRevising {
+            doneRevising()
+        }
+//        navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
     }
     
     
     @IBAction func closeModal(_ sender: Any) {
         dismiss(animated: true, completion: nil)
-
     }
-    
     
     var row: Int?
     var question: Question?
@@ -55,13 +58,6 @@ class AnswerRevisionViewController: UIViewController {
         
     }
     
-//
-//    @IBAction func saveAnswer(_ sender: Any) {
-//        exampleFamily.answers[row!].append(Answer(answeredUser: currentUser, answerDescription: answerTextView.text))
-//        print(exampleFamily.answers)
-//        navigationController?.popViewController(animated: true)
-//        dismiss(animated: true, completion: nil)
-//    }
     
     func answeredUserDescription() {
         var answeredUsersName : String = ""
@@ -79,6 +75,7 @@ class AnswerRevisionViewController: UIViewController {
         let index = answers?.index(where: {$0.answeredUser.userName == currentUser.userName})
         return index!
     }
+    
 }
 
 extension AnswerRevisionViewController: UITextViewDelegate {
@@ -92,6 +89,7 @@ extension AnswerRevisionViewController: UITextViewDelegate {
             return changedText.count <= 200
         
         }
+    
     func textViewDidChange(_ textView: UITextView) {
         if textView.text.count < 5 {
             wordCounterLabel.text = "최소 5자 이상 입력 \(textView.text.count)/200"

@@ -24,6 +24,7 @@ class QuestionViewController: UIViewController {
     var answerInput: String?
     var answeredUsersLabel: String = ""
    
+    var doneSaving: (()->())?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,9 +33,6 @@ class QuestionViewController: UIViewController {
         questionDescription.text = question!.questionDescription
         //질문 답변한 사람 표시하기
         answeredUserDescription()
-     
-//
-//        answerLabel.text = answerLabelPrep
         saveButton.layer.cornerRadius = 25
         saveButton.layer.borderWidth = 2.0
         saveButton.layer.borderColor = UIColor.lightGray.cgColor
@@ -44,24 +42,20 @@ class QuestionViewController: UIViewController {
         answerTextView.textContainerInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     }
     
-    @IBAction func closeModal(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-
-    }
     // 답변 저장 버튼 클릭 이벤트
     @IBAction func saveAnswer(_ sender: Any) {
-        
-
         // ref?.child("answerLists").childByAutoId().setValue(answerTextView.text) // 답변저장 누르면 내용 전송    [성태]
-        
-        
 //        answer = answerTextView.text
 //        question?.answers.append(Answer(answeredUser: currentUser, answerDescription: answerTextView.text)) // 실제로는 로그인 된 유저의 아이디를 넣어야 함
 //        print(question)
         exampleFamily.answers[row!].append(Answer(answeredUser: currentUser, answerDescription: answerTextView.text))
         print(exampleFamily.answers)
-        navigationController?.popViewController(animated: true)
-        dismiss(animated: true, completion: nil)
+        if let doneSaving  = doneSaving {
+            doneSaving()
+        }
+//        navigationController?.popViewController(animated: true)
+//        dismiss(animated: true, completion: nil)
+//        performSegue(withIdentifier: "AnswerDone", sender: nil)
 
     }
     
@@ -78,13 +72,27 @@ class QuestionViewController: UIViewController {
         }
     }
     
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? AnswerTableViewController{
-            destination.answers = answers
-            destination.question = question
-            destination.row = row
+        if segue.identifier == "AnswerDone" {
+            if let destination = segue.destination as? AnswerTableViewController {
+                destination.answers = answers
+                            destination.question = question
+                            destination.row = row
+            }
+        } else if segue.identifier == "AnswerCancel" {
+            
         }
+    
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let destination = segue.destination as? AnswerTableViewController{
+//            destination.answers = answers
+//            destination.question = question
+//            destination.row = row
+//        }
+
 }
 
 
