@@ -44,18 +44,20 @@ class QuestionViewController: UIViewController {
     
     // 답변 저장 버튼 클릭 이벤트
     @IBAction func saveAnswer(_ sender: Any) {
-        // ref?.child("answerLists").childByAutoId().setValue(answerTextView.text) // 답변저장 누르면 내용 전송    [성태]
-//        answer = answerTextView.text
-//        question?.answers.append(Answer(answeredUser: currentUser, answerDescription: answerTextView.text)) // 실제로는 로그인 된 유저의 아이디를 넣어야 함
-//        print(question)
+        //ref?.child("answerLists").childByAutoId().setValue(answerTextView.text) // 답변저장 누르면 내용 전송  Set value  [성태]
+      // 성태 님 , 아래 추가사항 입니다.
         exampleFamily.answers[row!].append(Answer(answeredUser: currentUser, answerDescription: answerTextView.text))
         print(exampleFamily.answers)
         if let doneSaving  = doneSaving {
             doneSaving()
         }
-//        navigationController?.popViewController(animated: true)
-//        dismiss(animated: true, completion: nil)
-//        performSegue(withIdentifier: "AnswerDone", sender: nil)
+        
+        ref?.child("answerLists").childByAutoId().setValue(answerTextView.text, withCompletionBlock: { (error, ref) in
+            exampleFamily.answers[self.row!].append(Answer(answeredUser: currentUser, answerDescription: self.answerTextView.text))
+            print(exampleFamily.answers)
+            self.navigationController?.popViewController(animated: true)
+            self.dismiss(animated: true, completion: nil)
+        })
 
     }
     

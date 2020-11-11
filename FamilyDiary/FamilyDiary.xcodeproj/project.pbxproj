@@ -3,16 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2CA1A55B47093B460ECEB5B8 /* Pods_FamilyDiary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A37A331BAEA1357D16E46F7 /* Pods_FamilyDiary.framework */; };
 		97737E042552BD6100D7169C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97737E032552BD6100D7169C /* GoogleService-Info.plist */; };
 		9788F0BB253BEF9100E33EC9 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9788F0BA253BEF9100E33EC9 /* Answer.swift */; };
-		C25FE90C5C66BE83047B5B10 /* Pods_FamilyDiary_FamilyDiaryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F53934059930F9D53D1D592 /* Pods_FamilyDiary_FamilyDiaryUITests.framework */; };
 		B311F2E62553D3070018992D /* CodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B311F2E42553D3070018992D /* CodeViewController.swift */; };
 		B311F2E72553D3070018992D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B311F2E52553D3070018992D /* TabBarViewController.swift */; };
+		B3D8DD892557B5FE00E4E37A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D8DD882557B5FE00E4E37A /* ProfileViewController.swift */; };
+		C25FE90C5C66BE83047B5B10 /* Pods_FamilyDiary_FamilyDiaryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F53934059930F9D53D1D592 /* Pods_FamilyDiary_FamilyDiaryUITests.framework */; };
 		C6A2FC6D2515CAA400132F4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A2FC6C2515CAA400132F4F /* AppDelegate.swift */; };
 		C6A2FC6F2515CAA400132F4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A2FC6E2515CAA400132F4F /* SceneDelegate.swift */; };
 		C6A2FC712515CAA400132F4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A2FC702515CAA400132F4F /* ViewController.swift */; };
@@ -58,11 +59,13 @@
 		53A0BAA8856297E7FF7A8DEF /* Pods-FamilyDiaryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FamilyDiaryTests.release.xcconfig"; path = "Target Support Files/Pods-FamilyDiaryTests/Pods-FamilyDiaryTests.release.xcconfig"; sourceTree = "<group>"; };
 		6F53934059930F9D53D1D592 /* Pods_FamilyDiary_FamilyDiaryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FamilyDiary_FamilyDiaryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75173E697F83319A71443AB8 /* Pods-FamilyDiary-FamilyDiaryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FamilyDiary-FamilyDiaryUITests.debug.xcconfig"; path = "Target Support Files/Pods-FamilyDiary-FamilyDiaryUITests/Pods-FamilyDiary-FamilyDiaryUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		974396C72556453600C5878A /* FamilyDiary.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FamilyDiary.entitlements; sourceTree = "<group>"; };
 		97737E032552BD6100D7169C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9788F0BA253BEF9100E33EC9 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		A017177CDD54A63C70BF4A56 /* Pods_FamilyDiaryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FamilyDiaryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B311F2E42553D3070018992D /* CodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeViewController.swift; sourceTree = "<group>"; };
 		B311F2E52553D3070018992D /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		B3D8DD882557B5FE00E4E37A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C6A2FC692515CAA400132F4F /* FamilyDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FamilyDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6A2FC6C2515CAA400132F4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6A2FC6E2515CAA400132F4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,7 +140,6 @@
 				EC115D7E004378C65BE638E5 /* Pods-FamilyDiaryTests.debug.xcconfig */,
 				53A0BAA8856297E7FF7A8DEF /* Pods-FamilyDiaryTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -177,6 +179,7 @@
 		C6A2FC6B2515CAA400132F4F /* FamilyDiary */ = {
 			isa = PBXGroup;
 			children = (
+				974396C72556453600C5878A /* FamilyDiary.entitlements */,
 				EB0F813B2541531B00F4C83D /* ViewController */,
 				B355A8A2251EE7D6003D706A /* Model */,
 				C6A2FC6C2515CAA400132F4F /* AppDelegate.swift */,
@@ -220,6 +223,7 @@
 				B311F2E52553D3070018992D /* TabBarViewController.swift */,
 				EB2BF5D42549430B00EB55BF /* AnswerTableViewCell.swift */,
 				EB200E1225527E5300B4533E /* AnswerRevisionViewController.swift */,
+				B3D8DD882557B5FE00E4E37A /* ProfileViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -470,6 +474,7 @@
 				C6A2FC712515CAA400132F4F /* ViewController.swift in Sources */,
 				EB544F882539F5E700913722 /* QuestionViewController.swift in Sources */,
 				EBA335462539868000A3FB7A /* User.swift in Sources */,
+				B3D8DD892557B5FE00E4E37A /* ProfileViewController.swift in Sources */,
 				EB1E10AA254BE9660076E6F0 /* Family.swift in Sources */,
 				C6A2FC6D2515CAA400132F4F /* AppDelegate.swift in Sources */,
 				C6A2FC6F2515CAA400132F4F /* SceneDelegate.swift in Sources */,
@@ -652,8 +657,9 @@
 			baseConfigurationReference = 3967BC612D7CD587481E2358 /* Pods-FamilyDiary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FamilyDiary/FamilyDiary.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2N86B853KH;
+				DEVELOPMENT_TEAM = 4QG3GC35LA;
 				INFOPLIST_FILE = FamilyDiary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -671,8 +677,9 @@
 			baseConfigurationReference = 2F1499950CF6DBD8523A1A21 /* Pods-FamilyDiary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FamilyDiary/FamilyDiary.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2N86B853KH;
+				DEVELOPMENT_TEAM = 4QG3GC35LA;
 				INFOPLIST_FILE = FamilyDiary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
