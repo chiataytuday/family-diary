@@ -32,43 +32,38 @@ class AnswerTableViewController: UITableViewController {
         
         ref = Database.database().reference()   // 인스턴스 [성태]
         
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    @IBAction func unwindToAnswerTableView(segue:UIStoryboardSegue) {
+        print("Unwind to Answer Table View")
     }
 
-    // MARK: - Table view data source
-
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return answers!.count
+        return exampleFamily.answers[row!].count
+        
+//        return answers!.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "answerCell", for: indexPath) as! AnswerTableViewCell
-        cell.userName.text = answers![indexPath.row].answeredUser.userName
-        cell.userAnswerDescription.text = answers![indexPath.row].answerDescription
-    
-        
+        cell.userName.text = exampleFamily.answers[row!][indexPath.row].answeredUser.userName
+        cell.userAnswerDescription.text = exampleFamily.answers[row!][indexPath.row].answerDescription
         return cell
     }
     
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
 
-
             return nil
         }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? AnswerRevisionViewController{
+            if let destination = segue.destination as? AnswerRevisionViewController{
+                destination.doneRevising = { [weak self] in
+                    self?.tableView.reloadData()
+                    print(self?.answers)
+                }
             destination.answers = answers
             destination.question = question
             destination.row = row
